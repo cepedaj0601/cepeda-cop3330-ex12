@@ -37,6 +37,20 @@ public class App {
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
 
-        
+        System.out.println("Enter the principal:");
+        int principal = in.nextInt();
+
+        System.out.println("Enter the rate of interest:");
+        double rate = (in.nextDouble())/100;
+
+        System.out.println("Enter the number of years:");
+        int years = in.nextInt();
+
+        double value = principal * (1 + rate * years);
+
+        String percent = "%"; //literally having to create this variable because i cant print % within a printf :(
+
+        System.out.printf("After %d years at %.2f%s, the investment will be worth $%.2f."
+                , years, (rate * 100), percent, value);
     }
 }
